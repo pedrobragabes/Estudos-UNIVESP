@@ -2,10 +2,6 @@
 
 Projeto de estudos para o curso de Bacharelado em Tecnologia da Informacao da UNIVESP, com foco em revisao ativa por flashcards, simulados e suporte com IA Gemini.
 
-## Descricao curta para o GitHub
-
-Flashcards, quizzes e simulados da UNIVESP com tutor IA Gemini para revisar erros e acelerar os estudos.
-
 ## Sobre o projeto
 
 Este repositorio centraliza materiais e uma aplicacao web interativa para estudo das disciplinas do curso.
@@ -16,13 +12,13 @@ Funcionalidades principais do app:
 - Quiz com temporizador (Normal e Dificil)
 - Simulado com questoes mistas
 - Tutor IA com Gemini para duvidas e explicacoes
-- Folha de formulas de Calculo I
+- Folha de formulas de COM150
 
 Materias atualmente cobertas:
 
-- Calculo I
-- Algoritmos e Programacao (Python)
-- Conceitos de Computacao
+- Fundamentos Matematicos para Computacao (COM150 - Turma 004)
+- Fundamentos de Internet e Web (COM130 - Turma 004)
+- Algoritmos e Programacao de Computadores II (COM120 - Turma 004)
 
 ## Estrutura
 
@@ -30,9 +26,9 @@ Materias atualmente cobertas:
 Estudos-UNIVESP/
 |- univesp-app/                  # Aplicacao web (React + Vite)
 |- docs/                         # Documentacao de planejamento e guias
-|- prompt-calculo-gemini.md      # Prompt de tutor para Calculo I
-|- prompt-computacao-gemini.md   # Prompt de tutor para Computacao
-|- prompt-python-gemini.md       # Prompt de tutor para Python
+|- prompts/                      # Prompts de estudo para Gemini
+|- pdfs/                         # Materiais em PDF das disciplinas
+|- package.json                  # Scripts de execucao pela raiz
 |- SECURITY.md                   # Politica de seguranca
 `- README.md                     # Visao geral do repositorio
 ```
@@ -45,57 +41,51 @@ Pre-requisitos:
 - npm
 - Chave de API do Gemini (Google AI Studio)
 
-```bash
-git clone git@github.com:pedrobragabes/Estudos-UNIVESP.git
-cd Estudos-UNIVESP/univesp-app
-npm install
-```
-
-Crie o arquivo de ambiente a partir do exemplo:
+1. Instale as dependencias do app pela raiz do repositorio:
 
 ```bash
-cp .env.local.example .env.local
+npm run install:app
 ```
 
-Edite `.env.local` e defina:
+2. Crie o arquivo de ambiente a partir do exemplo:
+
+```bash
+Copy-Item univesp-app/.env.local.example univesp-app/.env.local
+```
+
+3. Edite `univesp-app/.env.local` e defina:
 
 ```env
 VITE_GEMINI_API_KEY=sua_chave_aqui
 ```
 
-Inicie em desenvolvimento:
+4. Inicie em desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-Build de producao:
+5. Build de producao:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Publicacao no GitHub (git)
-
-Comandos recomendados para primeiro envio:
+Se preferir rodar direto na pasta do app:
 
 ```bash
-git init
-git remote add origin git@github.com:pedrobragabes/Estudos-UNIVESP.git
-git add .
-git status
-git commit -m "chore: publicar base do projeto Estudos UNIVESP"
-git branch -M main
-git push -u origin main
+cd univesp-app
+npm install
+npm run dev
 ```
 
-## Checklist rapido de seguranca antes do push
+## Se o site nao abrir
 
-- Confirme que `.env.local` nao sera enviado
-- Verifique se nao ha chave real em README, codigo ou commits
-- Rode `npm audit` dentro de `univesp-app`
-- Revise arquivos adicionados com `git status`
+- Confirme que voce esta executando os comandos na raiz do repositorio ou dentro de `univesp-app`.
+- Rode novamente `npm run install:app` para garantir dependencias instaladas.
+- Verifique se a chave `VITE_GEMINI_API_KEY` foi configurada em `univesp-app/.env.local`.
+- Confirme que a versao do Node.js e 18 ou superior.
 
 ## Documentacao
 

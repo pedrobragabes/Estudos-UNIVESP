@@ -8,13 +8,13 @@ Plataforma de estudos interativa para alunos da UNIVESP, com flashcards, quizzes
 - **Quiz** — múltipla escolha com temporizador (modos Normal e Difícil)
 - **Simulado** — 15 questões mistas com tempo
 - **Tutor IA** — chat com Google Gemini para tirar dúvidas
-- **Folha de Fórmulas** — referência rápida de Cálculo I
+- **Folha de Fórmulas** — referência rápida de COM150
 
 ## Matérias
 
-- Cálculo I
-- Algoritmos e Python
-- Conceitos de Computação
+- Fundamentos Matemáticos para Computação (COM150 - Turma 004)
+- Fundamentos de Internet e Web (COM130 - Turma 004)
+- Algoritmos e Programação de Computadores II (COM120 - Turma 004)
 
 ## Como rodar
 

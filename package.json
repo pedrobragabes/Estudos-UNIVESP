@@ -1,0 +1,11 @@
+{
+  "name": "estudos-univesp-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:app": "npm --prefix univesp-app install",
+    "dev": "npm --prefix univesp-app run dev",
+    "build": "npm --prefix univesp-app run build",
+    "preview": "npm --prefix univesp-app run preview"
+  }
+}

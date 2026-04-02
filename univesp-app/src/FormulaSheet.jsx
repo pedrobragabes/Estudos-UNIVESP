@@ -1,68 +1,62 @@
 export default function FormulaSheet({ onBack }) {
   const sections = [
     {
-      title: "L'Hospital",
+      title: "Conectivos Logicos",
       color: "#f59e0b",
       items: [
-        ["Condicao", "Limite resulta em 0/0 ou \u221e/\u221e"],
-        ["Formula", "lim f(x)/g(x) = lim f'(x)/g'(x)"],
-        ["Limite fundamental", "lim(x\u21920) sen(x)/x = 1"],
-        ["Repetir?", "Sim, se resultado ainda for 0/0 ou \u221e/\u221e"],
+        ["Conjuncao", "A and B: so e verdadeira quando A e B sao verdadeiras"],
+        ["Disjuncao", "A or B: so e falsa quando A e B sao falsas"],
+        ["XOU", "A xor B: verdadeira quando os valores sao diferentes"],
+        ["Negacao", "not A: inverte o valor logico de A"],
       ]
     },
     {
-      title: "Derivadas Fundamentais",
+      title: "Condicional",
       color: "#22c55e",
       items: [
-        ["(x^n)'", "n\u00b7x^(n-1)"],
-        ["(e^x)'", "e^x"],
-        ["(ln x)'", "1/x"],
-        ["(sen x)'", "cos x"],
-        ["(cos x)'", "-sen x"],
-        ["(constante)'", "0"],
+        ["A -> B", "So e falsa quando A = verdadeiro e B = falso"],
+        ["Leitura", "Se A, entao B"],
+        ["A <-> B", "Equivale a (A -> B) and (B -> A)"],
+        ["Interpretacao", "A e B precisam ter o mesmo valor logico"],
       ]
     },
     {
-      title: "Regras de Derivacao",
+      title: "Tautologia e Contradicao",
       color: "#6366f1",
       items: [
-        ["Produto", "(f\u00b7g)' = f'\u00b7g + f\u00b7g'"],
-        ["Quociente", "(f/g)' = (f'\u00b7g \u2212 f\u00b7g') / g\u00b2"],
-        ["Cadeia", "[f(g(x))]' = f'(g(x)) \u00b7 g'(x)"],
+        ["Tautologia", "Sempre verdadeira (ex: A or not A)"],
+        ["Contradicao", "Sempre falsa (ex: A and not A)"],
+        ["Uso em prova", "Valida argumento quando formula final vira tautologia"],
       ]
     },
     {
-      title: "Analise de Funcoes",
+      title: "Equivalencias",
       color: "#ec4899",
       items: [
-        ["Crescente", "f'(x) > 0"],
-        ["Decrescente", "f'(x) < 0"],
-        ["Ponto critico", "f'(p) = 0"],
-        ["Minimo local", "f'(p)=0 e f''(p) > 0  (\u222a)"],
-        ["Maximo local", "f'(p)=0 e f''(p) < 0  (\u2229)"],
-        ["Pt de inflexao", "f''(x) = 0 (e muda de sinal)"],
+        ["Definicao", "A e B sao equivalentes se A <-> B e tautologia"],
+        ["Comutativa", "A or B <-> B or A ; A and B <-> B and A"],
+        ["Associativa", "(A or B) or C <-> A or (B or C)"],
+        ["Distributiva", "A and (B or C) <-> (A and B) or (A and C)"],
       ]
     },
     {
-      title: "Integrais",
+      title: "Leis Classicas",
       color: "#8b5cf6",
       items: [
-        ["\u222bx^n dx", "x^(n+1)/(n+1) + C"],
-        ["\u222be^x dx", "e^x + C"],
-        ["\u222b(1/x) dx", "ln|x| + C"],
-        ["\u222bsen(x) dx", "-cos(x) + C"],
-        ["\u222bcos(x) dx", "sen(x) + C"],
-        ["Teo. Fundamental", "\u222b[a,b] f dx = F(b) \u2212 F(a)  onde F'=f"],
-        ["Substituicao", "u=g(x), du=g'(x)dx  \u2192  \u222bf(u)du"],
+        ["Neutros", "A or 0 -> A ; A and 1 -> A"],
+        ["Complementares", "A or not A -> 1 ; A and not A -> 0"],
+        ["De Morgan", "not(A or B) <-> (not A and not B)"],
+        ["De Morgan", "not(A and B) <-> (not A or not B)"],
       ]
     },
     {
-      title: "Cinematica",
+      title: "Simplificacao Rapida",
       color: "#06b6d4",
       items: [
-        ["Velocidade", "v(t) = x'(t)"],
-        ["Aceleracao", "a(t) = v'(t)"],
-        ["Posicao", "x(t) = \u222bv(t)dt"],
+        ["Expressao", "A and not(A and B)"],
+        ["Passo 1", "A and (not A or not B)"],
+        ["Passo 2", "(A and not A) or (A and not B)"],
+        ["Resultado", "A and not B"],
       ]
     },
   ];
@@ -77,7 +71,7 @@ export default function FormulaSheet({ onBack }) {
           &larr; Menu
         </button>
         <span style={{ fontSize: 15, fontWeight: 700 }}>Folha de Formulas</span>
-        <span style={{ fontSize: 11, color: "#64748b" }}>Calculo I</span>
+        <span style={{ fontSize: 11, color: "#64748b" }}>COM150</span>
       </div>
 
       <div style={{ display: "grid", gap: 10 }}>
