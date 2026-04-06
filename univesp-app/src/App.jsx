@@ -21,6 +21,10 @@ const FLASHCARDS = {
       { q: "Lei de De Morgan (1):", a: "\u00ac(A \u2228 B) \u21d4 (\u00acA \u2227 \u00acB)", difficulty: 2, topic: "Equivalencia" },
       { q: "Equivalencias uteis:", a: "Comutativa: A\u2228B\u21d4B\u2228A, A\u2227B\u21d4B\u2227A\nDistributiva: A\u2227(B\u2228C)\u21d4(A\u2227B)\u2228(A\u2227C)", difficulty: 3, topic: "Equivalencia" },
       { q: "Simplifique: A \u2227 \u00ac(A \u2227 B)", a: "A \u2227 \u00ac(A \u2227 B) \u21d4 A \u2227 (\u00acA \u2228 \u00acB) \u21d4 (A\u2227\u00acA) \u2228 (A\u2227\u00acB) \u21d4 A\u2227\u00acB", difficulty: 3, topic: "Equivalencia" },
+      { q: "Generalizacao Universal (\u2200-introducao) e valida quando:", a: "Partimos de um elemento arbitrario do dominio, sem restricao extra.\nEsse elemento nao pode depender de hipotese aberta especifica.", difficulty: 3, topic: "Predicados" },
+      { q: "Erro classico na Generalizacao Universal:", a: "Escolher um elemento especial (ex: 'se a e par') e depois concluir para todos.\nNesse caso a regra NAO pode ser aplicada.", difficulty: 3, topic: "Predicados" },
+      { q: "Linguagem procedimental x declarativa:", a: "Procedimental: foco em COMO resolver (passo a passo).\nDeclarativa: foco em O QUE deve ser satisfeito (fatos e regras).", difficulty: 1, topic: "Paradigmas" },
+      { q: "Prolog e exemplo de qual paradigma?", a: "Paradigma declarativo na programacao logica.", difficulty: 1, topic: "Paradigmas" },
     ]
   },
   com130: {
@@ -41,6 +45,11 @@ const FLASHCARDS = {
       { q: "Internet e o que?", a: "Conjunto de redes interconectadas que permite comunicacao entre aplicacoes distribuidas.", difficulty: 1, topic: "Internet" },
       { q: "WWW e o que?", a: "Sistema de documentos em hipermidia interligados por rede, normalmente sobre a Internet.", difficulty: 1, topic: "Internet" },
       { q: "Exemplos de aplicacoes de Internet:", a: "Email, streaming, compartilhamento de arquivos, pagamentos online e acesso seguro a dados.", difficulty: 1, topic: "Internet" },
+      { q: "TCP pertence a qual camada e qual sua ideia central?", a: "Camada de Transporte. E orientado a conexao, segmenta dados e busca entrega confiavel.", difficulty: 2, topic: "TCP-IP" },
+      { q: "UDP garante entrega como o TCP?", a: "Nao. E mais simples e rapido, sem garantia de entrega fim a fim.", difficulty: 2, topic: "TCP-IP" },
+      { q: "DNS usa qual transporte?", a: "Tipicamente UDP pela rapidez, mas TCP tambem pode ser usado em casos especificos (ex: transferencia de zona e respostas grandes).", difficulty: 3, topic: "TCP-IP" },
+      { q: "Endereco IP fica associado a que entidade?", a: "A uma interface de rede (porta/interface), nao ao equipamento inteiro.", difficulty: 2, topic: "Enderecamento" },
+      { q: "Comprimento do endereco IPv4:", a: "32 bits.", difficulty: 1, topic: "Enderecamento" },
     ]
   },
   com120: {
@@ -58,6 +67,11 @@ const FLASHCARDS = {
       { q: "Erro comum com estrutura aninhada:", a: "Tentar alterar item interno de tupla gera TypeError, mesmo se a tupla estiver dentro de lista.", difficulty: 3, topic: "Mutabilidade" },
       { q: "Como evitar efeito colateral em listas em funcoes?", a: "Criar copia antes de alterar (ex: lst.copy() ou lst[:]).", difficulty: 2, topic: "Boas praticas" },
       { q: "Resumo pratico para prova:", a: "Sempre pergunte: objeto e mutavel? Ha alias? A funcao altera in-place ou reatribui?", difficulty: 1, topic: "Boas praticas" },
+      { q: "Em POO, o que e um objeto?", a: "Uma instancia de uma classe.", difficulty: 1, topic: "POO" },
+      { q: "Atributo de instancia com mesmo nome de atributo de classe:", a: "O atributo da instancia sombreia o atributo da classe apenas naquele objeto.\nA classe e as outras instancias permanecem intactas.", difficulty: 2, topic: "POO" },
+      { q: "Sintaxe de heranca em Python:", a: "class X(Y):", difficulty: 1, topic: "POO" },
+      { q: "Troca de dados: estruturada x orientada a objetos", a: "Estruturada: principalmente por passagem de parametros entre procedimentos.\nPOO: objetos encapsulam estado (dados) e comportamento (metodos).", difficulty: 2, topic: "POO" },
+      { q: "Para que serve __eq__(self, other)?", a: "Define como objetos da classe sao comparados com o operador ==.", difficulty: 2, topic: "POO" },
     ]
   }
 };
@@ -78,6 +92,10 @@ const QUIZ_BANK = {
     { q: "Lei de De Morgan correta:", correct: "\u00ac(A \u2228 B) \u21d4 (\u00acA \u2227 \u00acB)", wrongs: ["\u00ac(A \u2228 B) \u21d4 (\u00acA \u2228 \u00acB)", "\u00ac(A \u2227 B) \u21d4 (\u00acA \u2227 \u00acB)", "\u00acA \u2228 B \u21d4 A \u2227 \u00acB", "A \u2228 B \u21d4 \u00acA \u2228 \u00acB"], difficulty: 3, topic: "Equivalencia" },
     { q: "Qual equivalencia distributiva esta correta?", correct: "A \u2227 (B \u2228 C) \u21d4 (A \u2227 B) \u2228 (A \u2227 C)", wrongs: ["A \u2227 (B \u2228 C) \u21d4 (A \u2228 B) \u2227 C", "A \u2228 (B \u2227 C) \u21d4 A \u2227 B \u2227 C", "A \u2228 B \u21d4 A \u2227 B", "A \u2227 B \u21d4 A \u2228 B"], difficulty: 3, topic: "Equivalencia" },
     { q: "Simplifique: A \u2227 \u00ac(A \u2227 B)", correct: "A \u2227 \u00acB", wrongs: ["\u00acA \u2227 B", "A \u2228 B", "\u00acA \u2228 \u00acB", "A \u2227 B"], difficulty: 3, topic: "Equivalencia" },
+    { q: "Para aplicar Generalizacao Universal de P(a) para \u2200x P(x), o elemento a deve ser:", correct: "Arbitrario e sem restricao adicional", wrongs: ["Um elemento especial escolhido por hipotese", "Necessariamente o primeiro elemento do dominio", "Um exemplo particular para o qual P(a) vale", "Qualquer elemento par do dominio"], difficulty: 3, topic: "Predicados" },
+    { q: "Quando a Generalizacao Universal NAO e valida?", correct: "Quando o elemento escolhido depende de uma hipotese aberta especifica", wrongs: ["Quando o dominio e finito", "Quando ha mais de um quantificador", "Quando a formula usa negacao", "Quando a prova usa tabela-verdade"], difficulty: 3, topic: "Predicados" },
+    { q: "Em linguagens procedimentais, o foco principal e:", correct: "Descrever como resolver em passos/instrucoes", wrongs: ["Descrever apenas resultados finais", "Evitar algoritmos", "Declarar fatos sem fluxo de execucao", "Definir apenas tipos de dados"], difficulty: 1, topic: "Paradigmas" },
+    { q: "Em linguagens declarativas como Prolog, o foco principal e:", correct: "Descrever o que deve ser satisfeito (fatos e regras)", wrongs: ["Detalhar cada passo de execucao", "Priorizar manipular ponteiros", "Otimizar loops de baixo nivel", "Substituir completamente a logica"], difficulty: 1, topic: "Paradigmas" },
   ],
   com130: [
     { q: "Objetivo primario das redes de computadores:", correct: "Permitir comunicacao e compartilhamento de recursos", wrongs: ["Substituir sistemas operacionais", "Eliminar protocolos", "Usar apenas rede sem fio", "Evitar servidores"], difficulty: 1, topic: "Redes" },
@@ -94,6 +112,14 @@ const QUIZ_BANK = {
     { q: "A Internet pode ser definida como:", correct: "Conjunto de redes interconectadas", wrongs: ["Somente a Web", "Uma unica rede local", "Apenas redes moveis", "Somente servidores"], difficulty: 1, topic: "Internet" },
     { q: "A WWW (Web) e:", correct: "Sistema de documentos em hipermidia interligados", wrongs: ["Sinomimo de roteador", "A camada de transporte", "Protocolo fisico", "Tipo de placa de rede"], difficulty: 1, topic: "Internet" },
     { q: "Qual item e uma aplicacao comum de Internet?", correct: "Streaming de audio e video", wrongs: ["Compilar kernel local", "Formatar disco offline", "Substituir camada fisica", "Criar BIOS"], difficulty: 1, topic: "Internet" },
+    { q: "O protocolo TCP pertence a qual camada do modelo TCP/IP?", correct: "Camada de Transporte", wrongs: ["Camada de Internet", "Camada de Aplicacao", "Camada de Acesso a Rede", "Camada Fisica"], difficulty: 2, topic: "TCP-IP" },
+    { q: "Uma funcao tipica do TCP e:", correct: "Segmentar dados e oferecer entrega confiavel", wrongs: ["Definir endereco MAC", "Rotear pacotes entre redes", "Codificar sinal eletrico", "Substituir DNS"], difficulty: 2, topic: "TCP-IP" },
+    { q: "Sobre o UDP, assinale a alternativa correta:", correct: "E rapido e simples, sem garantia de entrega fim a fim", wrongs: ["Garante entrega e ordem como o TCP", "So funciona em rede local", "Nao pertence a camada de transporte", "E obrigatorio para HTTP"], difficulty: 2, topic: "TCP-IP" },
+    { q: "Qual protocolo de aplicacao e famoso por usar UDP com frequencia?", correct: "DNS", wrongs: ["FTP", "SSH", "SMTP", "TELNET"], difficulty: 1, topic: "TCP-IP" },
+    { q: "Em alguns cenarios, o DNS tambem pode usar:", correct: "TCP", wrongs: ["ARP", "ICMP obrigatoriamente", "Somente UDP sem excecao", "Apenas HTTP"], difficulty: 3, topic: "TCP-IP" },
+    { q: "No modelo TCP/IP, o IP e protocolo principal de qual camada?", correct: "Camada de Internet", wrongs: ["Camada de Aplicacao", "Camada de Transporte", "Camada de Acesso a Rede", "Camada de Sessao"], difficulty: 2, topic: "TCP-IP" },
+    { q: "Conceitualmente, um endereco IP e associado a:", correct: "Uma interface de rede especifica", wrongs: ["Ao equipamento inteiro sem distinguir portas", "Somente ao roteador de borda", "Ao cabo de rede", "Ao switch"], difficulty: 2, topic: "Enderecamento" },
+    { q: "Qual o comprimento de um endereco IPv4?", correct: "32 bits", wrongs: ["16 bits", "48 bits", "64 bits", "128 bits"], difficulty: 1, topic: "Enderecamento" },
   ],
   com120: [
     { q: "No Python, variaveis sao melhor descritas como:", correct: "Nomes que referenciam objetos na memoria", wrongs: ["Caixas de memoria fixa", "Tipos fixos imutaveis", "Apenas registradores", "Ponteiros manuais obrigatorios"], difficulty: 1, topic: "Memoria" },
@@ -110,6 +136,12 @@ const QUIZ_BANK = {
     { q: "Qual afirmacao esta correta?", correct: "Reatribuicao de imutavel muda a referencia do nome, nao o objeto antigo", wrongs: ["Imutavel sempre muda in-place", "Listas sao imutaveis", "Toda atribuicao duplica memoria", "Python nao usa referencias"], difficulty: 3, topic: "Memoria" },
     { q: "No estudo de memoria em Python, 'alias' significa:", correct: "Dois nomes apontando para o mesmo objeto", wrongs: ["Dois objetos com mesmo valor e IDs diferentes", "Um erro de sintaxe", "Uma funcao sem retorno", "Conversao automatica de tipos"], difficulty: 2, topic: "Aliasing" },
     { q: "Qual tipo de questao costuma exigir mais cuidado em Python II?", correct: "Mutabilidade + passagem de parametros", wrongs: ["Escolha de fonte no terminal", "Configuracao de teclado", "Nome do arquivo README", "Versao do navegador"], difficulty: 1, topic: "Boas praticas" },
+    { q: "Em POO, qual e a melhor definicao para objeto?", correct: "Uma instancia de uma classe", wrongs: ["Um metodo estatico", "Um atributo de classe", "Um modulo importado", "Um tipo primitivo"], difficulty: 1, topic: "POO" },
+    { q: "Em Python, se p.x = 2 e ja existe Ponto.x = -1, entao:", correct: "p.x sombreia localmente o atributo da classe para aquele objeto", wrongs: ["Ponto.x e alterado para 2 em toda a classe", "Todas as instancias passam a ter x=2", "A classe Ponto deixa de ter atributo x", "O codigo sempre gera TypeError"], difficulty: 2, topic: "POO" },
+    { q: "Qual e a sintaxe correta para X herdar de Y em Python?", correct: "class X(Y):", wrongs: ["class X -> Y:", "class X extends Y:", "class X inherits Y:", "class X:Y()"], difficulty: 1, topic: "POO" },
+    { q: "Na estruturada, a troca de dados entre procedimentos ocorre principalmente por:", correct: "Passagem de parametros", wrongs: ["Heranca", "Polimorfismo", "Sobrecarga de operadores", "Encapsulamento de objetos"], difficulty: 2, topic: "POO" },
+    { q: "Na orientada a objetos, dados e procedimentos ficam:", correct: "Encapsulados nos objetos", wrongs: ["Separados obrigatoriamente em funcoes globais", "Sempre em variaveis globais", "Apenas em modulos sem classe", "Somente em arquivos externos"], difficulty: 2, topic: "POO" },
+    { q: "Em Python, o metodo __eq__(self, other) serve para:", correct: "Customizar comparacao de igualdade com ==", wrongs: ["Inicializar atributos no construtor", "Ordenar automaticamente uma lista", "Executar destruicao do objeto", "Criar copia profunda do objeto"], difficulty: 2, topic: "POO" },
   ]
 };
 
