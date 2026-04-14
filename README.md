@@ -50,6 +50,10 @@ npm run install:app
 2. Crie o arquivo de ambiente a partir do exemplo:
 
 ```bash
+# Linux / macOS / Git Bash
+cp univesp-app/.env.local.example univesp-app/.env.local
+
+# PowerShell
 Copy-Item univesp-app/.env.local.example univesp-app/.env.local
 ```
 
