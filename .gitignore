@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Next.js and Cloudflare build output
+.next/
+.open-next/
+dist/
+
+# Local Cloudflare state
+.wrangler/
+
+# Tests
+coverage/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo

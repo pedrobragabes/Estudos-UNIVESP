@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "estudos-univesp",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-07-16",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "estudos-univesp",
+      "database_id": "local-estudos-univesp",
+      "migrations_dir": "db/migrations"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
