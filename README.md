@@ -28,7 +28,7 @@ Tutor com IA, flashcards, quizzes, simulados e conteúdo didático estão explic
 Requer Node.js 20.9 ou superior.
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
