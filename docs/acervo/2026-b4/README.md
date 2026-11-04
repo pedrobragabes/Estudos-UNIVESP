@@ -1,0 +1,25 @@
+# Acervo autoral · 4º bimestre de 2026
+
+21 semanas com explicações, exemplos, exercícios, cartões e fontes. O relatório detalha a coleta de textos, leituras e transcrições, além das limitações de acesso e de análise.
+
+- [PES300 · S1 · Introdução à estatística descritiva](PES300/S1.md)
+- [PES300 · S2 · Organização e apresentação de dados](PES300/S2.md)
+- [PES300 · S3 · Probabilidades](PES300/S3.md)
+- [PES300 · S4 · Variáveis aleatórias discretas](PES300/S4.md)
+- [PES300 · S5 · Variáveis aleatórias contínuas](PES300/S5.md)
+- [PES300 · S6 · Teorema central do limite e leis dos grandes números](PES300/S6.md)
+- [PES300 · S7 · Introdução à inferência estatística](PES300/S7.md)
+- [ADM200 · S1 · Inovação como fonte de vantagem competitiva](ADM200/S1.md)
+- [ADM200 · S2 · A gestão da inovação dentro das empresas](ADM200/S2.md)
+- [ADM200 · S3 · Desenvolvimento de novos produtos](ADM200/S3.md)
+- [ADM200 · S4 · Criatividade e inovação](ADM200/S4.md)
+- [ADM200 · S5 · Prototipagem de ideias e projetos inovadores](ADM200/S5.md)
+- [ADM200 · S6 · O plano de negócios](ADM200/S6.md)
+- [ADM200 · S7 · Modelagem de negócios e fontes de financiamento](ADM200/S7.md)
+- [COM230 · S1 · Paradigmas, classes, objetos e ambiente Java](COM230/S1.md)
+- [COM230 · S2 · Classes, objetos, encapsulamento e ocultação de informação](COM230/S2.md)
+- [COM230 · S3 · Herança, polimorfismo, interfaces e classes abstratas](COM230/S3.md)
+- [COM230 · S4 · Generics e coleções em Java](COM230/S4.md)
+- [COM230 · S5 · Conjuntos, mapas e organização em pacotes](COM230/S5.md)
+- [COM230 · S6 · Tratamento de exceções](COM230/S6.md)
+- [COM230 · S7 · Streams, serialização, threads e redes](COM230/S7.md)

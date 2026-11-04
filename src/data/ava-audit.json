@@ -1,0 +1,19 @@
+{
+  "courses": 3,
+  "weeks": 21,
+  "revisionSections": 3,
+  "resourcesIdentified": 220,
+  "resourcesVisited": 217,
+  "pdfs": 60,
+  "pdfPages": 979,
+  "statusCounts": {
+    "verified": 84,
+    "partial": 299,
+    "pending": 25,
+    "excluded": 3
+  },
+  "transcripts": 97,
+  "videos": 100,
+  "bookPageObservations": 718,
+  "libraryChapters": 4
+}

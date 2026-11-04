@@ -30,3 +30,13 @@ npm-debug.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Personal study data and uploaded materials (never publish)
+.study-data/
+
+.vercel
+.env*
+!.env.example
+
+# Private AVA source observations
+.sources/

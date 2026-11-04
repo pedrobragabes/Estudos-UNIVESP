@@ -5,5 +5,6 @@ import nextTypeScript from "eslint-config-next/typescript";
 export default defineConfig([
   ...nextVitals,
   ...nextTypeScript,
-  globalIgnores([".next/**", ".open-next/**", "dist/**", "cloudflare-env.d.ts"]),
+  // Retained, untracked Vite prototype; it is not part of the Next app.
+  globalIgnores([".next/**", ".open-next/**", ".study-data/**", ".sources/**", "dist/**", "cloudflare-env.d.ts", "src/App.jsx", "src/GeminiTutor.jsx", "src/FormulaSheet.jsx", "src/main.jsx", "vite.config.js"]),
 ]);
