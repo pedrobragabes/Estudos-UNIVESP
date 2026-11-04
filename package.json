@@ -10,6 +10,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "npm run lint && npm run test && npm run build",
+    "export:study": "node scripts/export-study.cjs",
+    "verify:java": "python scripts/verify-java.py",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
@@ -18,24 +20,28 @@
     "node": ">=20.9.0"
   },
   "dependencies": {
+    "@vercel/blob": "^2.8.0",
+    "highlight.js": "^11.12.0",
+    "katex": "^0.19.1",
     "lucide-react": "1.24.0",
-    "next": "16.2.10",
+    "next": "16.3.4",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "zod": "4.4.3"
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "1.20.1",
+    "@types/katex": "^0.16.8",
     "@types/node": "^24.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "9.39.5",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.3.4",
     "typescript": "5.9.3",
     "vitest": "4.1.10",
     "wrangler": "4.111.0"
   },
   "overrides": {
-    "postcss": "8.5.19"
+    "postcss": "8.5.28"
   }
 }

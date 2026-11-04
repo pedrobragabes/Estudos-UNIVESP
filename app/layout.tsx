@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
+import "./study.css";
+import "katex/dist/katex.min.css";
+import "highlight.js/styles/github-dark.css";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const metadataBase = new URL(`${protocol}://${host}`);
-  const description = "Disciplinas, prazos, notas e progresso em um só lugar.";
+export function generateMetadata(): Metadata {
+  const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000");
+  const description = "Seu espaço de revisão: resumos, flashcards e simulados de Engenharia da Computação.";
 
   return {
     metadataBase,
